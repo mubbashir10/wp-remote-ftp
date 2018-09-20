@@ -1,32 +1,40 @@
 <?php
-/*
-Plugin Name: M10 Remote FTP
-Plugin URI: http://mubbashir10.com/projects/plugins/m10-remote-ftp
-Description: This simple yet powerful plugin allows your users to register to your WordPress website and let them upload files to some remote FTP server.
-Version: 2.0
-Author: Mubbashir10
-Author URI: https://mubbashir10.com
-*/
 
-//getting options values
-$ftp_server					= get_option('ftp_server_name');
-$ftp_username				= get_option('ftp_username');
-$ftp_password				= get_option('ftp_password');
-$ftp_email					= get_option('ftp_email');
+    namespace M10Plugin;
 
-//loading plugin assests
-function load_plugin_assets(){
-    wp_enqueue_style('m10-grid',plugin_dir_url( __FILE__ ).'/resources/css/grid.css');
-    wp_enqueue_style('m10-css',plugin_dir_url( __FILE__ ).'/resources/css/style.css');
-    wp_enqueue_script('m10-js-script', plugin_dir_url( __FILE__ ).'/resources/js/script.js', array( 'jquery' ) );
-}
-add_action('admin_head', 'load_plugin_assets');
+    /**
+    * Plugin Name: WP Remote FTP
+    * Plugin URI: http://mubbashir10.com/projects/plugins/wp-remote-ftp
+    * Description: Wordpress plugin which lets you connect to a remote ftp server and manage files.
+    * Version: 2.0.0
+    * Author: Mubbashir10
+    * Author URI: https://mubbashir10.com
+    */
 
-//adding backend options page
-require ('screens/admin_options.php');
-require ('screens/my_files.php');
-require ('screens/upload_new_files.php');
+    /**
+     * package wide constants
+     */
+    define('WP_REMOTE_FTP_VERSION', '2.0.0');
+    define('WP_REMOTE_FTP_MIN_WP_VERSION', '3.0');
+    define('WP_REMOTE_FTP_PLUGIN_PATH', plugin_dir_path(__FILE__));
+    define('WP_REMOTE_FTP_PLUGIN_URL', plugin_dir_url( __FILE__ ));
 
+
+
+    
+    /**
+     * including modules
+     */
+    require (WP_REMOTE_FTP_PLUGIN_PATH.'/admin/Options.php');
+    require (WP_REMOTE_FTP_PLUGIN_PATH.'/admin/MyFiles.php');
+
+    $wp_remote_ftp = new WpRemoteFtp\Options();
+
+    // attempt login
+    $wp_remote_ftp->wp_remote_ftp_login();
+
+    $wp_remote_ftp_files = new WpRemoteFtp\MyFiles();
+    
 
 
 
