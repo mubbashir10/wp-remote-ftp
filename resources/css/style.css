@@ -1,0 +1,100 @@
+a:hover{
+	cursor:pointer;
+}
+.m10-backend-wrapper{
+	margin:50px 35px;
+}
+.m10-backend-wrapper img.icon{
+	float: left;
+	width:68px;
+	margin-right:20px;
+}
+.m10-backend-wrapper p.slogan{
+	color:#555;
+}
+.m10-backend-wrapper div.content{
+	background:#fff;
+	margin:40px auto;
+	border-bottom: 2px solid #04619b;
+	padding:20px 50px;
+}
+.m10-backend-wrapper div.signature{
+	border-left:2px solid #f1f1f1;
+	margin:30px auto;
+	padding:0px 50px;
+}
+.m10-backend-wrapper div.content div.action-header{
+
+	margin-bottom:30px;
+}
+.m10-backend-wrapper div.content .button{
+    padding: 3px 20px;
+    border: 0px;
+    color: #f1f1f1;
+    margin-right: 10px;
+    height:auto;
+    border-radius:2px;
+}
+.m10-backend-wrapper div.content .button, .m10-backend-wrapper div.content .button:hover, .m10-backend-wrapper div.content .button:focus, .m10-backend-wrapper div.content .button:active, .m10-backend-wrapper div.content .button:visited{
+	border: 0px;
+	cursor:pointer;
+}
+.m10-backend-wrapper div.content .button.light{
+    background:#e5e5e5;
+    color:#222;
+}
+.m10-backend-wrapper div.content .button.grey{
+    background: #bbb;
+    color:#222;
+}
+.m10-backend-wrapper div.content .button.colored{
+	background: #777;
+	
+}
+.m10-backend-wrapper div.content .button.dark{
+	background: #0073AA;
+}
+.m10-backend-wrapper div.content div.loading{
+	background: #fff;
+	text-align: center;
+	vertical-align: middle;
+}
+.m10-backend-wrapper div.content table.files-list-table{
+	color: #333;
+	font-family: Helvetica, Arial, sans-serif;
+	border-collapse:collapse;
+	border-spacing: 0;
+	width: 100%;
+	text-align: left;
+}
+.m10-backend-wrapper div.content table.files-list-table td, .m10-backend-wrapper div.content table.files-list-table th{
+	border: 1px solid transparent;
+	height: 30px;
+	padding-left: 10px;
+	transition: all 0.3s;
+}
+.m10-backend-wrapper div.content table.files-list-table th{
+	background: #DFDFDF;
+	font-weight: bold; 
+}
+.m10-backend-wrapper div.content table.files-list-table td{
+	background: #FAFAFA;
+}
+.m10-backend-wrapper div.content table.files-list-table td input.filename:hover{ 
+	cursor: text;
+}
+.m10-backend-wrapper div.content table.files-list-table tr:nth-child(even) td{ 
+	background: #F1F1F1; 
+}
+.m10-backend-wrapper div.content table.files-list-table tr:nth-child(odd) td{ 
+	background: #FEFEFE;
+}
+.m10-backend-wrapper div.content div.files-pagination{ 
+	margin-top: 50px;
+	margin-bottom: 10px;
+	float: right;
+}
+.m10-backend-wrapper div.content div.files-pagination a.button{ 
+	padding:0px 10px;
+	margin-right:2px;
+}

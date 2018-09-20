@@ -1,0 +1,1 @@
+[21-Sep-2016 17:00:19 America/New_York] PHP Warning:  ftp_delete(): File not found in /home/mubbashir10/public_html/projects/sprinting/wp-content/plugins/m10-remote-ftp/includes/delete.php on line 15
